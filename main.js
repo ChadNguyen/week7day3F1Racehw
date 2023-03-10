@@ -1,30 +1,31 @@
-const resultContainer = document.getElementById('result');
-const form = document.querySelector('form');
-const seasonInput = document.querySelector('#season');
-const roundInput = document.querySelector('#round');
-const tableBody = document.querySelector('#f1-table tbody');
+const resultContainer = document.getElementById('result')
+const form = document.querySelector('form')
+const seasonInput = document.querySelector('#season')
+const roundInput = document.querySelector('#round')
+const tableBody = document.querySelector('#f1-table tbody')
 
 function displayData(drivers, round) {
   tableBody.innerHTML = '';
   drivers.forEach((driver) => {
     const {
       position,
-      Driver: { givenName, familyName },
-      Constructors: [{ name: constructorName }],
+      Driver: { givenName, familyName, nationality },
+      Constructors: [{ name: sponsor }],
       points,
       wins,
     } = driver;
 
-    const tr = document.createElement('tr');
+    const tr = document.createElement('tr')
     tr.innerHTML = `
       <td>${position}</td>
       <td>${givenName} ${familyName}</td>
-      <td>${constructorName}</td>
+      <td>${nationality}</td>
+      <td>${sponsor}</td>
       <td>${points}</td>
       <td>${wins}</td>
       <td>${round}</td>
     `;
-    tableBody.appendChild(tr);
+    tableBody.appendChild(tr)
   });
 }
 

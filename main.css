@@ -1,45 +1,31 @@
-
+/* General styles */
 body {
-  background-color: #FF8C00;
+  background: linear-gradient(to right, #ffa300, #ff0a00);
 }
 
-
-#f1-table {
-  background-color: #222;
-  color: #fff;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+  align-items: center;
 }
 
-
-#results-table {
-  background-color: #222;
-  color: #fff;
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
 
-
-.driver {
-  background-color: #FFA500;
-  padding: 20px;
-  margin-bottom: 20px;
+.form-group {
+  margin: 10px;
+  flex-grow: 1;
 }
-
-
-.driver h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-
-.driver p {
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: #222;
-}
-
 
 input[type="submit"] {
-  background-color: #FFC200; 
-  color: #FFF; 
+  background-color: #f16051;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -47,37 +33,76 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
-
 .navbar {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #222;
 }
-
 
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
+  color: #a8a9b1;
+}
+
+.navbar-nav .nav-link {
+  color: #a8a9b1;
 }
 
 
-#form input[type="submit"] {
-  background-color: #FFC200;
+.tablemain {
+  display: flex;
+  flex-direction: column;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tablecontainer {
+  display: flex;
+  background-color: #212529;
+  width: 70%;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#f1-table {
+  width: 90%;
+  justify-content: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+
+#f1-table th {
+  justify-content: center;
+  background-color: #212529;
+ 
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+.table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
+}
+
+#result {
+  margin-top: 20px;
   font-size: 18px;
-  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+
 }
 
 
-#results-table tr {
-  background-color: #222;
-  color: #fff;
-}
-
-
-#results-table td {
-  border: 1px solid #fff;
-  padding: 10px;
-}
